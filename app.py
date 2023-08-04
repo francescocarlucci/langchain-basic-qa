@@ -104,7 +104,6 @@ sizing an application for his purpose is also an important skill, to avoid over-
 system and wasting processing and financial resources.
 ''')
 
-
 st.divider()
 
 st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
