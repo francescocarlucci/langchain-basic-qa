@@ -86,7 +86,7 @@ with st.form("basic_qa"):
 
 with st.expander("Exercise Tips"):
     st.write('''
-    - Browse [the code on GitHub](https://github.com/francescocarlucci/invoice-data-extractor/blob/main/app.py) and make sure you understand it.
+    - Browse [the code on GitHub](https://github.com/francescocarlucci/langchain-basic-qa/blob/main/app.py) and make sure you understand it.
     - Fork the repository to customize the code.
     - Tired of the OpenAI LLM? Try to plug in another model from the many others supported by LangChain.
     - Wanna work with other file formats? You can use txt, md, csv and even HTML usgin other [document loaders](https://python.langchain.com/docs/modules/data_connection/document_loaders/).
