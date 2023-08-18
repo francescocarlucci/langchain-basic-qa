@@ -61,18 +61,16 @@ with st.form("basic_qa"):
 
                 pdf_loader = PyPDFLoader(temporary_file.name)
 
+                # the PDF loader already splits the doc into pages
+                pages = pdf_loader.load()
+
                 embeddings = OpenAIEmbeddings(openai_api_key=openai_key)
 
-                db = DocArrayInMemorySearch.from_documents(
-                    pdf_loader.load(), 
-                    embeddings
-                )
+                db = DocArrayInMemorySearch.from_documents(pages, embeddings)
 
-                qa_chain = RetrievalQA.from_chain_type(
-                    llm=ChatOpenAI(openai_api_key=openai_key, temperature = 0), 
-                    chain_type="stuff", 
-                    retriever=db.as_retriever()
-                )
+                llm = ChatOpenAI(openai_api_key=openai_key, temperature=0)
+
+                qa_chain = RetrievalQA.from_chain_type(llm, chain_type="stuff", retriever=db.as_retriever())
 
                 response = qa_chain.run(query)
 
