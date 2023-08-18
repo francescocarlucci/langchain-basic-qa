@@ -1,8 +1,8 @@
 import os
 import tempfile
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
+from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import DocArrayInMemorySearch
