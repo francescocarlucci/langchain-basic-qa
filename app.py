@@ -16,8 +16,9 @@ st.header('🤖 Basic QA Over Custom Data')
 
 st.subheader('Learn LangChain | Demo Project #2')
 
+st.success("This is a demo project related to the [Learn LangChain](https://learnlangchain.org/) mini-course.")
+
 st.write('''
-This is a demo project related to the [Learn LangChain](https://learnlangchain.org/) mini-course.
 Interacting with custom content is one of the most popular and powerful usage of LLMs and AI systems,
 thanks to the vast amount of application opportunities.
 
